@@ -1,11 +1,11 @@
 // const getLastItem = array => array.slice(-1)[0]
-// const isLastItem = (array, item) => array[array.length - 1] === item ? item : null
+const isLastItem = (array, item) => array[array.length - 1] === item ? item : null
 // const isFirstItem = (array, item) => array[0] === item ? item : null
 // const getNextItem = (array, index) => !isLastItem(array, array[index]) ? array[index + 1] : null
 
 ;(() => {
   const words = [
-    'hello', 'world', 'say', 'hi', 'bye', 'love', 'me', 'please', 'heh', 'huh', 'people', 'freeze', 'sleep',
+    'hello', 'world', 'say', 'hi', 'bye',
   ]
   
   const wordsElement = document.getElementById('words')
@@ -26,7 +26,11 @@
   input.onkeyup = function (e) {
     if (e.currentTarget.value.trim() === currentWord) {
       wordsElements[wordsCounter].style.color = 'royalblue'
-      wordsCounter += 1
+      if (isLastItem(words, currentWord)) {
+        wordsCounter = 0
+      } else {
+        wordsCounter += 1      
+      }
       currentWord = words[wordsCounter]
       e.currentTarget.value = ''
     } else {
