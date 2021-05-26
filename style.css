@@ -1,7 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+*, *:focus {
+  outline: none;
+}
+
+html {
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(-45deg, #090718, #120e2c);
+}
+
+body, input, label {
+  font-family: 'Josefin Sans', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
 #app {
   width: 90%;
   margin: .2rem auto;
-  background: #ccc;
+  background: linear-gradient(45deg, rgba(9, 7, 24, 0.514), rgba(22, 17, 54, 0.514));
   padding: 1em;
   display: flex;
   flex-direction: column;
@@ -17,14 +35,35 @@
 #words span {
   border-bottom: 1px solid;
   text-align: center;
+  font-size: 1.2em;
+  color: #efefef;
+}
+
+#input-wrapper {
+  text-align: center;
 }
 
 #input-wrapper #input {
-  width: 100%;
+  width: 95%;
   height: 30px;
   border: 2px solid rgba(117, 117, 117, 0.4);
-  background: #fff;
-  color: #3d3d3d;
-  font-size: 1.3em;
-  padding: 1em 0;
+  background: rgba(9, 7, 24, 0.76);
+  color: #efefef;
+  font-size: 1.5em;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+#input-wrapper #input:focus,
+#input-wrapper #input:active {
+  color: #f1f1f1;
+}
+
+#timer-wrapper {
+  letter-spacing: 5px;
+  color: #f1f1f1;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  font-size: 48pt;
 }
