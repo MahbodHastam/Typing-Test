@@ -1,5 +1,5 @@
 # Typing Test
 
-### To-dos:
+### To-dos
 - [ ] Make UI Better
 - [ ] Add Timer
